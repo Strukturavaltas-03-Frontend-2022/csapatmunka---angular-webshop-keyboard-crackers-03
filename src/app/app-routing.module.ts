@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
+import { Cat03Component } from './page/cat03/cat03.component';
+import { Cat04Component } from './page/cat04/cat04.component';
 import { HomeComponent } from './page/home/home.component';
 
 const routes: Routes = [
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'cat02',
     component: Cat02Component,
+  },
+  {
+    path: 'cat03',
+    component: Cat03Component,
+  },
+  {
+    path: 'cat04',
+    component: Cat04Component,
   },
   {
     path: '**',

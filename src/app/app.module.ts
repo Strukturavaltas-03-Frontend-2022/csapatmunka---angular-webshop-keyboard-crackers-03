@@ -9,6 +9,8 @@ import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { CardComponent } from './common/card/card.component';
+import { Cat03Component } from './page/cat03/cat03.component';
+import { Cat04Component } from './page/cat04/cat04.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CardComponent } from './common/card/card.component';
     Cat01Component,
     Cat02Component,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    Cat03Component,
+    Cat04Component
   ],
   imports: [
     BrowserModule,
