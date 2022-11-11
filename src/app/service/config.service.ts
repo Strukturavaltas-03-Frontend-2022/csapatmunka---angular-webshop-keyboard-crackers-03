@@ -11,12 +11,14 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'Pharmacy of Keyboard Crackers';
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},
-    {text: 'Category01', link: '/cat01'},
-    {text: 'Category02', link: '/cat02'},
+    {text: 'Painkillers', link: '/cat01'},
+    {text: 'Sedatives', link: '/cat02'},
+    {text: 'Stimulants', link: '/cat03'},
+    {text: 'Illegal stuffs', link: '/cat04'},
   ];
 
   constructor() { }
