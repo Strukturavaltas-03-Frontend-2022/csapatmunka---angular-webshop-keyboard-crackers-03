@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,10 @@ import { HomeComponent } from './page/home/home.component';
 import { CardComponent } from './common/card/card.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './common/product-list/product-list.component';
+import { ProductPaginatorComponent } from './common/product-paginator/product-paginator.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +27,17 @@ import { Cat04Component } from './page/cat04/cat04.component';
     HomeComponent,
     CardComponent,
     Cat03Component,
-    Cat04Component
+    Cat04Component,
+    FilterPipe,
+    ProductListComponent,
+    ProductPaginatorComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

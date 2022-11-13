@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-cat04',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Cat04Component implements OnInit {
 
-  constructor() { }
+  illegals: Product[] = [];
+  filterPhrase: string = '';
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.illegals = this.productService.getCategoryIdThree();
   }
 
 }
