@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   drugs: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
     this.drugs = this.productService.getAll();
