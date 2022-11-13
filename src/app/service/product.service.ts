@@ -16,4 +16,20 @@ export class ProductService {
   getAll(): Product[]  {
     return Drugs;
   }
+
+  getCategoryIdZero(): Product[]{
+    return Drugs.filter(item => item.categoryId === 0)
+  }
+
+  getCategoryIdOne(): Product[]{
+    return Drugs.filter(item => item.categoryId === 1)
+  }
+
+  getCategoryIdTwo(): Product[]{
+    return Drugs.filter(item => item.categoryId === 2)
+  }
+
+  getCategoryIdThree(): Product[]{
+    return Drugs.filter(item => item.categoryId === 3)
+  }
 }
