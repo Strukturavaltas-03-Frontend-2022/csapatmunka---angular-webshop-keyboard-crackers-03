@@ -9,13 +9,17 @@
 
 .card {
   width: 100px;
-  height: 300px;
+  height: 270px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
   box-shadow: 5px 5px 10px rgba(133, 132, 132, 0.69);
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px 10px rgba(223, 223, 223, 0.69);
 }
 
 .card-title {
@@ -28,5 +32,5 @@
 
 .card-img-top{
   height: 100px;
-  object-fit:contain;
+  object-fit:cover;
 }
