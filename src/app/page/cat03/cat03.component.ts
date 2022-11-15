@@ -10,11 +10,15 @@ import { ProductService } from 'src/app/service/product.service';
 export class Cat03Component implements OnInit {
   stimulants: Product[] = [];
   filterPhrase: string = '';
+  featuredDrugs:Product[] = [];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getCategoryById(2).subscribe((data:Product[]) => this.stimulants = data);
+    this.productService.getCategoryById(2).subscribe((data:Product[]) => {
+      this.stimulants = data;
+      this.featuredDrugs = data.filter(drug => drug.featured).slice(0, 5);
+    });
   }
 
 }
