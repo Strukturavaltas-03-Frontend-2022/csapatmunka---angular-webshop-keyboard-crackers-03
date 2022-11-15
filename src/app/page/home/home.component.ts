@@ -15,6 +15,6 @@ export class HomeComponent implements OnInit {
   constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
-    this.drugs = this.productService.getAll();
+    this.productService.getAll().subscribe((data:Product[]) => this.drugs = data);
   }
 }
