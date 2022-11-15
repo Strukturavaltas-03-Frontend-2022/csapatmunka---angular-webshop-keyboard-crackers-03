@@ -1,5 +1,5 @@
-<div class="row" *ngFor="let drug of drugs">
+<div class="row" *ngIf="drugs">
   <div class="col-12">
-    <app-card [drug]="drug"></app-card>
+    <app-card [drugs]="drugs"></app-card>
   </div>
 </div>
