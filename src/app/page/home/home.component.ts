@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class HomeComponent implements OnInit {
 
 
-  drugs: Product[] = [];
+  @Output() drugs: Product[] = [];
 
   constructor(public productService: ProductService) {}
 
