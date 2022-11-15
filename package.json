@@ -11,7 +11,8 @@
     "test:03": "ng test --include=**/event.service.spec.ts",
     "test:04": "ng test --include=**/navigation.component.spec.ts",
     "test:05": "ng test --include=**/events-list.component.spec.ts",
-    "test:06": "ng test --include=**/app.component.spec.ts"
+    "test:06": "ng test --include=**/app.component.spec.ts",
+    "jsonserver": "json-server --watch drug_list.json"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@angular/compiler-cli": "~13.1.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^12.11.1",
+    "json-server": "^0.17.1",
     "ngc-esbuild-devkit": "^0.0.40",
     "ts-node": "^10.4.0",
     "typescript": "~4.5.2"
