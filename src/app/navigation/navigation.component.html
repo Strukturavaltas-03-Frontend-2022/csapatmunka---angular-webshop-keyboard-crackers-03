@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top shadow-lg p-3 bg-dark">
   <a
-    class="navbar-brand text-light"
+    class="navbar-brand text-light brand"
     routerLink="/"
   >{{ appName }}</a>
   <button
@@ -19,7 +19,7 @@
     class="collapse navbar-collapse"
     id="navbarSupportedContent"
   >
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ml-auto pr-3">
       <li *ngFor="let item of menuItems" class="nav-item">
         <a
           class="nav-link text-white"
