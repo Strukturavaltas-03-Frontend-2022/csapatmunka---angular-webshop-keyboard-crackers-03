@@ -15,7 +15,7 @@ export class Cat04Component implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.illegals = this.productService.getCategoryIdThree();
+    this.productService.getCategoryById(3).subscribe((data:Product[]) => this.illegals = data);
   }
 
 }

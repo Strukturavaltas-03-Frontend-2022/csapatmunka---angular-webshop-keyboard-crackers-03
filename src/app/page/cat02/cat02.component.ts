@@ -15,7 +15,7 @@ export class Cat02Component implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.sedatives = this.productService.getCategoryIdOne();
+    this.productService.getCategoryById(1).subscribe((data:Product[]) => this.sedatives = data);
   }
 
 }
