@@ -17,6 +17,9 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { ProductPaginatorComponent } from './common/product-paginator/product-paginator.component';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { ProductEditorComponent } from './common/product-editor/product-editor.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { ProductPaginatorComponent } from './common/product-paginator/product-pa
     FilterPipe,
     ProductListComponent,
     ProductPaginatorComponent,
+    AdminComponent,
+    DataEditorComponent,
+    ProductEditorComponent,
 
   ],
   imports: [

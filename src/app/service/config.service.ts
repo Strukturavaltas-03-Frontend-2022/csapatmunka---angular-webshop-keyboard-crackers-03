@@ -19,6 +19,7 @@ export class ConfigService {
     {text: 'Sedatives', link: '/cat02'},
     {text: 'Stimulants', link: '/cat03'},
     {text: 'Illegal stuffs', link: '/cat04'},
+    {text: 'Admin', link: '/admin'},
   ];
 
   constructor() { }
