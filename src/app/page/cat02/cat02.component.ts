@@ -11,11 +11,15 @@ export class Cat02Component implements OnInit {
 
   sedatives: Product[] = [];
   filterPhrase: string = '';
+  featuredDrugs:Product[] = [];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.sedatives = this.productService.getCategoryIdOne();
+    this.productService.getCategoryById(1).subscribe((data:Product[]) => {
+      this.sedatives = data;
+      this.featuredDrugs = data.filter(drug => drug.featured).slice(0, 5);
+    });
   }
 
 }

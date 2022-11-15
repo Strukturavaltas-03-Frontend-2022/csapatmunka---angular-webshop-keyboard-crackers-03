@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'src/drug_list.json'
+  apiUrl: 'http://localhost:3000/products'
 };
 
 /*
