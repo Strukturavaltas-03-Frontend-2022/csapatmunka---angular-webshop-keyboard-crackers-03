@@ -11,11 +11,15 @@ export class Cat04Component implements OnInit {
 
   illegals: Product[] = [];
   filterPhrase: string = '';
+  featuredDrugs:Product[] = [];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.illegals = this.productService.getCategoryIdThree();
+    this.productService.getCategoryById(3).subscribe((data:Product[]) => {
+      this.illegals = data;
+      this.featuredDrugs = data.filter(drug => drug.featured).slice(0, 5);
+    });
   }
 
 }

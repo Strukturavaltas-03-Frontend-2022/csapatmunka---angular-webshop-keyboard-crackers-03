@@ -11,25 +11,19 @@ import { Product } from '../model/product';
 export class ProductService {
   list: Product[] = [];
 
-  constructor() {}
+  constructor(private client: HttpClient) {}
 
-  getAll(): Product[]  {
-    return Drugs;
+  getAll(): Observable<Product[]>  {
+    return this.client.get<Product[]>(environment.apiUrl);
   }
 
-  getCategoryIdZero(): Product[]{
-    return Drugs.filter(item => item.categoryId === 0)
+  getCategoryById(categoryId:number): Observable<Product[]> {
+    let url = `${environment.apiUrl}?categoryId=${categoryId}`;
+    return this.client.get<Product[]>(url);
   }
 
-  getCategoryIdOne(): Product[]{
-    return Drugs.filter(item => item.categoryId === 1)
-  }
-
-  getCategoryIdTwo(): Product[]{
-    return Drugs.filter(item => item.categoryId === 2)
-  }
-
-  getCategoryIdThree(): Product[]{
-    return Drugs.filter(item => item.categoryId === 3)
+  update(product:Product): Observable<Product> {
+    let url = `${environment.apiUrl}/${product.id}`;
+    return this.client.patch<Product>(url, product);
   }
 }

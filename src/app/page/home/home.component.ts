@@ -8,13 +8,15 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-
   @Output() drugs: Product[] = [];
+  featuredDrugs:Product[] = [];
 
   constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
-    this.drugs = this.productService.getAll();
+    this.productService.getAll().subscribe((data:Product[]) =>{
+      this.drugs = data;
+      this.featuredDrugs = data.filter(drug => drug.featured).slice(0, 5);
+    }); 
   }
 }
