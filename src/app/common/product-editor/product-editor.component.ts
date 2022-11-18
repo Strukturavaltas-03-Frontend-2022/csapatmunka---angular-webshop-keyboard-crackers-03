@@ -10,6 +10,7 @@ export class ProductEditorComponent implements OnInit {
 
   @Input() product: Product = new Product();
   @Output() onSaveEmitter = new EventEmitter();
+  @Output() onDeleteEmitter = new EventEmitter();
 
   constructor() { }
 
@@ -17,7 +18,10 @@ export class ProductEditorComponent implements OnInit {
     this.onSaveEmitter.emit(this.product);
   }
 
-  ngOnInit(): void {
+  onDelete(): void {
+    this.onDeleteEmitter.emit(this.product);
   }
 
+  ngOnInit(): void {
+  }
 }

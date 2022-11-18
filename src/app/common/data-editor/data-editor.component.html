@@ -1,3 +1,14 @@
-<div *ngFor="let product of products">
-    <app-product-editor [product]="product" (onSaveEmitter)="onSave($event)"></app-product-editor>
+<div class="row">
+    <div class="table responsive">
+        <table class="table table striped table-light table-hover">
+            <tbody>
+                <tr>
+                    <app-product-editor [product]="newProduct" (onSaveEmitter)="onSave($event)"></app-product-editor>
+                </tr>
+                <tr *ngFor="let product of products">
+                        <app-product-editor [product]="product" (onSaveEmitter)="onSave($event)" (onDeleteEmitter)="onDelete($event)"></app-product-editor>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
