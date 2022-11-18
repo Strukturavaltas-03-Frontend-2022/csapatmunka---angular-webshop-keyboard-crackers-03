@@ -1,3 +1,5 @@
+<app-product-editor [product]="newProduct" (onSaveEmitter)="onSave($event)"></app-product-editor>
+
 <div *ngFor="let product of products">
-    <app-product-editor [product]="product" (onSaveEmitter)="onSave($event)"></app-product-editor>
+    <app-product-editor [product]="product" (onSaveEmitter)="onSave($event)" (onDeleteEmitter)="onDelete($event)"></app-product-editor>
 </div>

@@ -22,8 +22,17 @@ export class ProductService {
     return this.client.get<Product[]>(url);
   }
 
+  create(product:Product):Observable<Product> {
+    return this.client.post<Product>(environment.apiUrl, product);
+  }
+
   update(product:Product): Observable<Product> {
     let url = `${environment.apiUrl}/${product.id}`;
     return this.client.patch<Product>(url, product);
+  }
+
+  delete(product:Product): Observable<Product> {
+    let url = `${environment.apiUrl}/${product.id}`;
+    return this.client.delete<Product>(url);
   }
 }
