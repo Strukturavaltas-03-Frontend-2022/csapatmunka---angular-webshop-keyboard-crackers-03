@@ -1,17 +1,13 @@
-<h2 class="mb-4 mx-auto text-white">Illegal Stuffs list</h2>
-
-<app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
-<div class="container">
-
+<div class="">
   <h2 class="mb-4 mx-auto text-white">Illegal Stuffs list</h2>
   <div class="input-group mb-3 col-12 col-sm-6 mx-left">
     <input
-      [(ngModel)]="filterPhrase"
-      type="text"
-      class="form-control"
-      placeholder="Search Illegal Stuffs Name / Description"
-      aria-label="Recipient's username"
-      aria-describedby="button-addon2"
+    [(ngModel)]="filterPhrase"
+    type="text"
+    class="form-control"
+    placeholder="Search Illegal Stuffs Name / Description"
+    aria-label="Recipient's username"
+    aria-describedby="button-addon2"
 
     />
     <div class="input-group-append">
@@ -20,7 +16,10 @@
       </button>
     </div>
   </div>
-  <div class="container-fluid">
+      <h3 class="text-light my-3 text-center">---  Featured Illegal stuffs  ---</h3>
+  <app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
+        <h3 class="text-light my-3 text-center">---  All Illegal stuffs  ---</h3>
+  <div class="">
     <div class="row">
       <div class="">
         <app-product-list
