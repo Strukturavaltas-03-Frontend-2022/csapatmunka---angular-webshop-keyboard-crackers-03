@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class HomeComponent implements OnInit {
   @Output() drugs: Product[] = [];
   featuredDrugs:Product[] = [];
+  specialOfferDrugs: Product[] = [];
 
   constructor(public productService: ProductService) {}
 
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
     this.productService.getAll().subscribe((data:Product[]) =>{
       this.drugs = data;
       this.featuredDrugs = data.filter(drug => drug.featured).slice(0, 5);
-    }); 
+      this.specialOfferDrugs = data.filter(drug => drug.active).slice(0, 5);
+    });
   }
 }

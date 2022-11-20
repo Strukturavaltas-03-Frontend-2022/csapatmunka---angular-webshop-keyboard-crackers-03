@@ -1,5 +1,5 @@
 export class Product {
-  id: number = 0;
+  id: number = -1;
   categoryId: number = 0;
   name: string = '';
   description: string = '';
