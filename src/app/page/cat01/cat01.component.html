@@ -1,17 +1,20 @@
+
+
 <h2 class="mb-4 mt-3 mx-auto text-white">Recommend you</h2>
 <app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
 <hr>
 
 <div class="container">
   <h2 class="mb-4 mt-4 mx-auto text-white">Painkillers list</h2>
+
   <div class="input-group mb-3 col-12 col-sm-6 mx-left">
     <input
-      [(ngModel)]="filterPhrase"
-      type="text"
-      class="form-control"
-      placeholder="Search Painkillers Name / Description"
-      aria-label="Recipient's username"
-      aria-describedby="button-addon2"
+    [(ngModel)]="filterPhrase"
+    type="text"
+    class="form-control"
+    placeholder="Search Painkillers Name / Description"
+    aria-label="Recipient's username"
+    aria-describedby="button-addon2"
     />
     <div class="input-group-append">
       <button class="btn btn-info" type="button" id="button-addon2">
@@ -19,7 +22,10 @@
       </button>
     </div>
   </div>
-  <div class="container-fluid">
+    <h3 class="text-light my-3 text-center">---  Featured Painkillers  ---</h3>
+  <app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
+  <h3 class="text-light my-3 text-center">---   All Painkillers  ---</h3>
+  <div class="">
     <div class="row">
       <div class="col-12">
         <app-product-list

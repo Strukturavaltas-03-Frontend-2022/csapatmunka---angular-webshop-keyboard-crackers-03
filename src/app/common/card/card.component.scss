@@ -33,3 +33,7 @@
   height: 100px;
   object-fit:cover;
 }
+
+.card-img-top:hover {
+	object-fit:contain;
+}
