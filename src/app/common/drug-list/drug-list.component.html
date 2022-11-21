@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-light" *ngFor="let col of columns">
+            {{ col.title }}
+          </th>
+          <th class="text-light">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-dark text-light" *ngFor="let row of drugList$ | async">
+          <ng-container *ngIf="!row.editable">
+            <td>{{ row.id }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.description }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.stock }}</td>
+            <td>{{ row.featured }}</td>
+            <td>{{ row.active }}</td>
+            <td>{{ row.categoryId }}</td>
+          </ng-container>
+          <ng-container class="container" *ngIf="row.editable">
+            <td >
+              <input class="col-12" [(ngModel)]="row.id" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.name" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.description" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.price" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.stock" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.featured" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.active" />
+            </td>
+            <td>
+              <input class="col-12" [(ngModel)]="row.categoryId" />
+            </td>
+          </ng-container>
+          <td>
+            <div class="btn-group bg-dark">
+              <button
+                (click)="row.editable = !row.editable"
+
+                class="btn btn-info mr-2"
+              >
+                <i class="bi bi-pencil-square"></i>
+              </button>
+              <button
+                (click)="row.editable = !row.editable"
+                (click)="onSave(row)"
+                class="btn btn-success mr-2"
+              >
+                <i class="bi bi-save"></i>
+              </button>
+              <button (click)="onDelete(row)" class="btn btn-danger">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

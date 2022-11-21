@@ -1,4 +1,5 @@
 export class Product {
+  [x: string]: any;
   id: number = -1;
   categoryId: number = 0;
   name: string = '';
