@@ -12,14 +12,26 @@
       <tbody>
         <tr class="bg-dark text-light" *ngFor="let row of drugList$ | async">
           <td *ngFor="let col of columns">
-            {{ row[col.key] }}
+            <input
+              id="name"
+              type="text"
+              placeholder="New drug name"
+              [(ngModel)]="row[col.key]"
+              class="form-control"
+            />
           </td>
           <td>
             <div class="btn-group bg-dark">
-              <button [routerLink]="['/edit', row.id]" class="btn btn-info mr-2">
+              <button
+            (click)="onSave(row)"
+                class="btn btn-info mr-2"
+              >
                 <i class="bi bi-pencil-square"></i>
               </button>
-               <button (click)="onDelete(row)" class="btn btn-danger">
+              <button (click)="onSave(row)" class="btn btn-success mr-2">
+                <i class="bi bi-save"></i>
+              </button>
+              <button (click)="onDelete(row)" class="btn btn-danger">
                 <i class="bi bi-trash"></i>
               </button>
             </div>

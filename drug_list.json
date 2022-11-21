@@ -1,23 +1,12 @@
 {
   "products": [
     {
-      "id": 2,
-      "categoryId": 0,
-      "name": "CUCUMBER MELON ANTIBACTERIAL SANITIZER",
-      "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-      "price": 784,
-      "stock": 85,
-      "featured": false,
-      "active": true,
-      "img_src": "assets/img/2.jpeg"
-    },
-    {
       "id": 3,
       "categoryId": 1,
       "name": "Zyvoxx",
       "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
       "price": 586,
-      "stock": 32,
+      "stock": "33",
       "featured": false,
       "active": false,
       "img_src": "assets/img/3.jpeg"
@@ -27,8 +16,8 @@
       "categoryId": 2,
       "name": "FENTANYLx",
       "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-      "price": 747,
-      "stock": 60,
+      "price": "754",
+      "stock": "67",
       "featured": false,
       "active": true,
       "img_src": "assets/img/4.jpeg"
@@ -538,17 +527,6 @@
       "stock": "17",
       "featured": true,
       "active": true
-    },
-    {
-      "id": 52,
-      "categoryId": 0,
-      "name": "",
-      "description": "",
-      "img_src": "assets/img/noimg.jpeg",
-      "price": 0,
-      "stock": 0,
-      "featured": false,
-      "active": false
     }
   ]
 }

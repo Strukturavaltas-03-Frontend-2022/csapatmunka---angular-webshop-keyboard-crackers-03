@@ -1,9 +1,11 @@
-import { Drugs } from './../../drugs';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService, IDrugsColumn } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
 import { Product } from 'src/app/model/product';
+import { EventEmitter } from '@angular/core';
+import { Input } from '@angular/core';
+import { Output } from '@angular/core';
 
 @Component({
   selector: 'app-drug-list',
@@ -15,6 +17,9 @@ export class DrugListComponent implements OnInit {
 
   drugList$: Observable<Product[]> = this.productService.getAll();
 
+  @Input() product: Product = new Product();
+  @Output() onSaveEmitter = new EventEmitter();
+  @Output() onDeleteEmitter = new EventEmitter();
 
   constructor(
     private config: ConfigService,
@@ -23,9 +28,15 @@ export class DrugListComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  onSave(drug: Product): void {
+    this.productService
+      .update(drug)
+      .subscribe((drug) => (this.drugList$ = this.productService.getAll()));
+  }
+
   onDelete(drug: Product): void {
     this.productService
       .delete(drug)
-      .subscribe((car) => (this.drugList$ = this.productService.getAll()));
+      .subscribe((drug) => (this.drugList$ = this.productService.getAll()));
   }
 }
