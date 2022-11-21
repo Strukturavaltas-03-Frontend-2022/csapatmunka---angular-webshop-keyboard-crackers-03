@@ -6,6 +6,7 @@ import { Cat02Component } from './page/cat02/cat02.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
 import { HomeComponent } from './page/home/home.component';
+import { DrugEditorComponent } from './common/drug-editor/drug-editor.component';
 
 const routes: Routes = [
   {
@@ -33,9 +34,13 @@ const routes: Routes = [
     component: AdminComponent,
   },
   {
+    path: 'edit/:id',
+    component: DrugEditorComponent,
+  },
+  {
     path: '**',
     component: HomeComponent,
-  }
+  },
 ];
 
 @NgModule({

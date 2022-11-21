@@ -20,6 +20,8 @@ import { ProductPaginatorComponent } from './common/product-paginator/product-pa
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
 import { ProductEditorComponent } from './common/product-editor/product-editor.component';
+import { DrugListComponent } from './common/drug-list/drug-list.component';
+import { DrugEditorComponent } from './common/drug-editor/drug-editor.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ProductEditorComponent } from './common/product-editor/product-editor.c
     AdminComponent,
     DataEditorComponent,
     ProductEditorComponent,
+    DrugListComponent,
+    DrugEditorComponent,
 
   ],
   imports: [

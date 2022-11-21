@@ -1,28 +1,6 @@
 {
   "products": [
     {
-      "id": 0,
-      "categoryId": 3,
-      "name": "CORRECT ESSENTIAL ACTIVATOR",
-      "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-      "price": 784,
-      "stock": 72,
-      "featured": true,
-      "active": false,
-      "img_src": "assets/img/0.jpeg"
-    },
-    {
-      "id": 1,
-      "categoryId": 2,
-      "name": "Lovastatin",
-      "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-      "price": 744,
-      "stock": 57,
-      "featured": false,
-      "active": true,
-      "img_src": "assets/img/1.jpeg"
-    },
-    {
       "id": 2,
       "categoryId": 0,
       "name": "CUCUMBER MELON ANTIBACTERIAL SANITIZER",
@@ -560,6 +538,17 @@
       "stock": "17",
       "featured": true,
       "active": true
+    },
+    {
+      "id": 52,
+      "categoryId": 0,
+      "name": "",
+      "description": "",
+      "img_src": "assets/img/noimg.jpeg",
+      "price": 0,
+      "stock": 0,
+      "featured": false,
+      "active": false
     }
   ]
 }

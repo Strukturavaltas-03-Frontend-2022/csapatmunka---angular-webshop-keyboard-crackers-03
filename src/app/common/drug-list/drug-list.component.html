@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead class="">
+        <tr>
+          <th class="text-light" *ngFor="let col of columns">
+            {{ col.title }}
+          </th>
+          <th class="text-light">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-dark text-light" *ngFor="let row of drugList$ | async">
+          <td *ngFor="let col of columns">
+            {{ row[col.key] }}
+          </td>
+          <td>
+            <div class="btn-group bg-dark">
+              <button [routerLink]="['/edit', row.id]" class="btn btn-info mr-2">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+               <button (click)="onDelete(row)" class="btn btn-danger">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
