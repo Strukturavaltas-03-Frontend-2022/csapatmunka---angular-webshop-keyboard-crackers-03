@@ -1,7 +1,12 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+</style>
+
+
 <nav
   class="navbar navbar-expand-lg navbar-light bg-dark sticky-top p-3 bg-dark"
 >
-  <a class="navbar-brand text-light brand" routerLink="/">{{ appName }}</a>
+  <a class="navbar-brand text-light display-2" routerLink="/">{{ appName }}</a>
   <button
     class="navbar-toggler bg-light"
     type="button"
@@ -16,8 +21,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto pr-3">
-      <li *ngFor="let item of menuItems" class="nav-item active">
-        <a class="nav-link text-white" [routerLink]="item.link">{{
+      <li *ngFor="let item of menuItems" class="nav-item">
+        <a class="nav-link text-light" routerLink="/{{item.link}}">{{
           item.text
         }}</a>
       </li>
