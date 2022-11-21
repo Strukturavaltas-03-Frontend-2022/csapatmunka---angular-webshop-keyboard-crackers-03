@@ -11,15 +11,15 @@
       <p class="card-text text-break">Descr: {{ drug.description }}</p>
       <p class="card-text">On stock: {{ drug.stock }}</p>
       <h2 class="card-text font-weight-bold">Price: {{ drug.price }}$</h2>
-      <div class="card-text col-12">
-        <div class="row ml-1">
-          <h6 *ngIf="drug.featured" class="card-badge mr-auto">
-            <span class="badge badge-pill badge-success">New</span>
-          </h6>
-          <h6 *ngIf="drug.active" class="card-badge ml-auto">
-            <span class="badge badge-pill badge-danger">10% Disc.</span>
-          </h6>
-        </div>
+    </div>
+    <div class="container">
+      <div class="row mb-0 p-2">
+        <h5 *ngIf="drug.featured" class="mr-auto">
+          <span class="badge badge-pill badge-success">New</span>
+        </h5>
+        <h5 *ngIf="drug.active" class="ml-auto">
+          <span class="badge badge-pill badge-danger">10% Disc.</span>
+        </h5>
       </div>
     </div>
   </div>
