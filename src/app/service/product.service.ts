@@ -38,6 +38,7 @@ export class ProductService {
     return this.client.patch<Product>(url, product);
   }
 
+
   delete(product: Product): Observable<Product> {
     let url = `${environment.apiUrl}/${product.id}`;
     return this.client.delete<Product>(url);
