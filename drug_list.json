@@ -549,6 +549,17 @@
       "featured": true,
       "active": false,
       "img_src": "assets/img/49.jpeg"
+    },
+    {
+      "id": 51,
+      "categoryId": 0,
+      "name": "Algopyrin",
+      "description": "General painkiller",
+      "img_src": "assets/img/noimg.jpeg",
+      "price": "100",
+      "stock": "17",
+      "featured": true,
+      "active": true
     }
   ]
 }
