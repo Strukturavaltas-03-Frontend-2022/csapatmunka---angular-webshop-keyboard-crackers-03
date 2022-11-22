@@ -1,3 +1,5 @@
+
+
 <div class="row">
   <div class="col-12">
     <table class="table">
@@ -23,7 +25,7 @@
           </ng-container>
           <ng-container class="container" *ngIf="row.editable">
             <td >
-              <input class="col-12" [(ngModel)]="row.id" />
+              <input class="col-12" readonly [(ngModel)]="row.id" />
             </td>
             <td>
               <input class="col-12" [(ngModel)]="row.name" />
