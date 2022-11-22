@@ -4,8 +4,8 @@
       "id": 0,
       "categoryId": 3,
       "name": "CORRECT ESSENTIAL ACTIVATOR",
-      "description": "Ez egy drága cucc...",
-      "price": 784,
+      "description": "Lorem ipsum",
+      "price": "80",
       "stock": "75",
       "featured": true,
       "active": false,
@@ -17,11 +17,12 @@
       "categoryId": 2,
       "name": "Lovastatin",
       "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",
-      "price": 744,
+      "price": "800",
       "stock": 57,
       "featured": false,
       "active": true,
-      "img_src": "assets/img/1.jpeg"
+      "img_src": "assets/img/1.jpeg",
+      "editable": false
     },
     {
       "id": 2,
