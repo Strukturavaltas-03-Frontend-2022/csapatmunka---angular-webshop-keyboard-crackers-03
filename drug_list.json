@@ -4,23 +4,25 @@
       "id": 0,
       "categoryId": 3,
       "name": "CORRECT ESSENTIAL ACTIVATOR",
-      "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
-      "price": 784,
-      "stock": 72,
+      "description": "Lorem ipsum",
+      "price": "80",
+      "stock": "75",
       "featured": true,
       "active": false,
-      "img_src": "assets/img/0.jpeg"
+      "img_src": "assets/img/0.jpeg",
+      "editable": false
     },
     {
       "id": 1,
       "categoryId": 2,
       "name": "Lovastatin",
       "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",
-      "price": 744,
+      "price": "800",
       "stock": 57,
       "featured": false,
       "active": true,
-      "img_src": "assets/img/1.jpeg"
+      "img_src": "assets/img/1.jpeg",
+      "editable": false
     },
     {
       "id": 2,
@@ -42,7 +44,8 @@
       "stock": 32,
       "featured": false,
       "active": false,
-      "img_src": "assets/img/3.jpeg"
+      "img_src": "assets/img/3.jpeg",
+      "editable": false
     },
     {
       "id": 4,
@@ -130,7 +133,8 @@
       "stock": 17,
       "featured": false,
       "active": false,
-      "img_src": "assets/img/11.jpeg"
+      "img_src": "assets/img/11.jpeg",
+      "editable": false
     },
     {
       "id": 12,
@@ -262,7 +266,8 @@
       "stock": 43,
       "featured": false,
       "active": true,
-      "img_src": "assets/img/23.jpeg"
+      "img_src": "assets/img/23.jpeg",
+      "editable": false
     },
     {
       "id": 24,
@@ -290,12 +295,13 @@
       "id": 26,
       "categoryId": 1,
       "name": "oxycodone hydrochloride",
-      "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+      "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
       "price": 99,
       "stock": 80,
       "featured": false,
       "active": true,
-      "img_src": "assets/img/26.jpeg"
+      "img_src": "assets/img/26.jpeg",
+      "editable": false
     },
     {
       "id": 27,

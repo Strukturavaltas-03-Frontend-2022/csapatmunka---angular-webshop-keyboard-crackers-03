@@ -17,15 +17,16 @@ class EditableProduct extends Product {
   styleUrls: ['./drug-list.component.scss'],
 })
 export class DrugListComponent implements OnInit {
+  filterPhrase: string = '';
 
-    editMode: boolean = false;
+  editMode: boolean = false;
 
   editModes: boolean[] = [];
   columns: IDrugsColumn[] = this.config.drugsColumns;
 
-
-
   drugList$: Observable<EditableProduct[]> = this.productService.getAll();
+  drugListSearch: Product[] = [];
+  featuredDrugs: Product[] = [];
 
   @Input() product: Product = new Product();
   @Output() onSaveEmitter = new EventEmitter();
@@ -36,7 +37,9 @@ export class DrugListComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   onSave(drug: EditableProduct): void {
     this.productService

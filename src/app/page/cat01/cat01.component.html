@@ -18,20 +18,19 @@
 
 <h4 class="mb-4 mt-3 mx-auto text-white">NEW products recommended to you:</h4>
 
-<app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
+<app-product-paginator [drugs]="featuredDrugs | filter: { name: filterPhrase, description: filterPhrase }"></app-product-paginator>
 
-<h4 class="mb-4 mt-3 mx-auto text-white text-center">
+<h4 class="mb-4 mt-3 mx-auto text-light text-center">
   *** All Painkillers ***
 </h4>
-<app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
+
 
 <div class="">
   <div class="row">
     <div class="col-12">
       <app-product-list
         [drugs]="
-          painKillers
-            | filter: { name: filterPhrase, description: filterPhrase }
+          painKillers | filter: { name: filterPhrase, description: filterPhrase }
         "
       ></app-product-list>
     </div>

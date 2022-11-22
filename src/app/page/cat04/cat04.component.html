@@ -15,13 +15,15 @@
     </button>
   </div>
 </div>
+
 <h4 class="mb-4 mt-3 mx-auto text-white">NEW products recommended to you:</h4>
-<app-product-paginator [drugs]="featuredDrugs"></app-product-paginator>
+
+<app-product-paginator [drugs]="featuredDrugs | filter: { name: filterPhrase, description: filterPhrase }"></app-product-paginator>
 
 <h4 class="text-light my-3 text-center">*** All Illegal stuffs ***</h4>
 <div class="">
   <div class="row">
-    <div class="">
+    <div class="col-12">
       <app-product-list
         [drugs]="
           illegals | filter: { name: filterPhrase, description: filterPhrase }
